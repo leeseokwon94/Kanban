@@ -1,5 +1,4 @@
 import React from "react";
-import { Draggable, DropResult, ResponderProvided } from "react-beautiful-dnd";
 import { ITask } from "./Board";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";

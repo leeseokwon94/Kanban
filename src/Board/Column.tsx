@@ -2,7 +2,7 @@ import React from "react";
 import { Task } from "./Task";
 import "./Column.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { IColumn, ITask } from "./Board";
 import { useFetch } from "../hooks/useFetch";
 import { Draggable, Droppable } from "react-beautiful-dnd";
@@ -11,16 +11,22 @@ type IProps = {
 	column: IColumn;
 	addTask(id: string): void;
 	removeTask(id: string): void;
+	removeColumn(id: string): void;
 };
 
 export function Column({
 	column,
 	addTask,
 	removeTask,
+	removeColumn,
 }: IProps): React.ReactElement {
 	const { id, title, limitedTasksNum, tasks } = column;
-	const onHandleClick = () => {
+	const onTaskAdd = () => {
 		addTask(id);
+	};
+
+	const onColumnRemove = () => {
+		removeColumn(id);
 	};
 	return (
 		<div className="Column">
@@ -44,6 +50,9 @@ export function Column({
 						None
 					</option>
 				</select>
+				<button className="columnDelButton" onClick={onColumnRemove}>
+					<FontAwesomeIcon icon={faXmark} />
+				</button>
 			</div>
 			{tasks.map((task, index) => (
 				<Draggable key={task.id} draggableId={task.id} index={index}>
@@ -62,7 +71,7 @@ export function Column({
 					)}
 				</Draggable>
 			))}
-			<button className="TaskAddButton" onClick={onHandleClick}>
+			<button className="TaskAddButton" onClick={onTaskAdd}>
 				<FontAwesomeIcon icon={faPlus} />
 			</button>
 		</div>

@@ -38,6 +38,12 @@ export function Board(): React.ReactElement {
 		setBoardData(boardData.concat(newColumn));
 	};
 
+	const removeColumn = (id: string) => {
+    setBoardData(
+      boardData.filter(column=>column.id !== id)
+    )
+  };
+
 	const addTask = (id: string) => {
 		const newTask: ITask = {
 			id: uuidv4(),
@@ -110,6 +116,7 @@ export function Board(): React.ReactElement {
 										column={column}
 										addTask={addTask}
 										removeTask={removeTask}
+                    removeColumn={removeColumn}
 									/>
 									{provided.placeholder}
 								</div>
