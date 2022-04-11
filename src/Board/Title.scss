@@ -1,0 +1,96 @@
+.Title {
+	//border: 1px solid blue;
+	width: 50%;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid #b0bec5;
+	margin-bottom: 30px;
+}
+
+.TitleInputForm {
+	width: 90%;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.TitleInput {
+	cursor: pointer;
+	outline: none;
+	width: 80%;
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	font-size: 2.1rem;
+	border: 2px solid white;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	&:hover {
+		border: 2px solid #b0bec5;
+		border-style: visible;
+		transform: scale(1.02);
+		-webkit-transform: scale(1.02);
+		-moz-transform: scale(1.02);
+		-ms-transform: scale(1.02);
+		-o-transform: scale(1.02);
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-ms-border-radius: 15px;
+		-o-border-radius: 15px;
+	}
+}
+
+.TitleEditButton {
+	visibility: hidden;
+	font-size: large;
+	color: #b0bec5;
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.deadLine {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.deadLine input {
+	outline-style: none;
+	cursor: pointer;
+	text-align: end;
+	margin: 10px;
+	padding: 3px;
+	font-size: 0.5rem;
+	border: 2px solid white;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	&:hover {
+		border: 1px solid #b0bec5;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+	}
+}
+.deadLine span {
+	font-size: 1.2rem;
+	padding-bottom: 5px;
+}

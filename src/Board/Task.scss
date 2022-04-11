@@ -1,0 +1,80 @@
+.Task {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 7rem;
+	padding: 10px;
+	margin-bottom: 0.5rem;
+	border-radius: 10px;
+}
+
+.TaskTitle {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.TaskTitlenput {
+	margin: 0.3rem;
+	align-self: flex-start;
+	width: 80%;
+	word-break: break-word;
+	font-size: 1rem;
+	border-style: none;
+	padding: 3px;
+}
+
+.taskDelButton {
+	padding-right: 5px;
+	font-size: small;
+	color: #8eacbb;
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	&:hover {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		color: #34515e;
+	}
+}
+.taskInfo {
+	display: flex;
+	justify-content: space-between;
+}
+
+.AssignedInput {
+	padding: 3px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	align-self: flex-start;
+	width: 40%;
+	border-style: none;
+	font-size: 0.5rem;
+	align-self: flex-end;
+}
+
+.Deadline {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+}
+
+.Deadline input {
+	border-style: none;
+	font-size: 0.5rem;
+	padding: 3px;
+}
+
+.Description {
+	display: none;
+}
